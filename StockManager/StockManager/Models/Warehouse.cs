@@ -16,9 +16,11 @@ namespace StockManager.Models
             Long
         }
         [Key]
-        public int WarehosueUID { get; set; }
+        public int WarehouseUID { get; set; }
         [Required]
-        [Display(Name ="")]
+        [Display(Name ="Warehouse Code")]
+        [StringLength(10, MinimumLength = 2)]
         public string WarehouseRef { get; set; }
+
     }
 }

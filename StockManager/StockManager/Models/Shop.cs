@@ -14,6 +14,12 @@ namespace StockManager.Models
             Shop,
             Consessions
         }
+        public int ShopUID { get; set; }
+        [Required]
+        [Display(Name = "Shop Code")]
+        [StringLength(10, MinimumLength =2)]
+        public string ShopRef { get; set; }
+
 
     }
 }
