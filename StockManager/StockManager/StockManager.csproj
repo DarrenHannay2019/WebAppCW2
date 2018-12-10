@@ -10,4 +10,17 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Shops\Shop\" />
+    <Folder Include="Pages\Shops\ShopAdjustment\" />
+    <Folder Include="Pages\Shops\ShopReturn\" />
+    <Folder Include="Pages\Shops\ShopTransfer\" />
+    <Folder Include="Pages\Stock\" />
+    <Folder Include="Pages\Suppliers\" />
+    <Folder Include="Pages\Warehouses\WarehouseReturn\" />
+    <Folder Include="Pages\Warehouses\WarehouseTransfer\" />
+    <Folder Include="Pages\Warehouses\WarehouseAdjustment\" />
+    <Folder Include="Pages\Warehouses\Warehouse\" />
+  </ItemGroup>
+
 </Project>
