@@ -1,0 +1,100 @@
+﻿@page
+@model StockManager.Pages.Shops.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Shop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.ShopRef)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.ShopRef)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseArea)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseArea)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseTown)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseTown)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehousePostCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehousePostCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseTelephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseTelephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseFax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseFax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseMemo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseMemo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.SHopType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.SHopType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.DefaultWarehouse)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.DefaultWarehouse)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.CreatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.CreatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.CreatedDate)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Shop.ShopUID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

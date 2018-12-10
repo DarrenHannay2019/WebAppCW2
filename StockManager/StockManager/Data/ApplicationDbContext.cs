@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using StockManager.Models;
 
 namespace StockManager.Data
 {
@@ -12,5 +13,7 @@ namespace StockManager.Data
             : base(options)
         {
         }
+        public DbSet<StockManager.Models.Warehouse> Warehouse { get; set; }
+        public DbSet<StockManager.Models.Shop> Shop { get; set; }
     }
 }

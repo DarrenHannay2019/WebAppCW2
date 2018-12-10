@@ -1,0 +1,108 @@
+﻿@page
+@model StockManager.Pages.Shops.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].ShopRef)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].WarehouseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].WarehouseStreet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].WarehouseArea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].WarehouseTown)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].WarehousePostCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].WarehouseTelephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].WarehouseFax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].WarehouseMemo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].SHopType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].DefaultWarehouse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop[0].CreatedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Shop) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShopRef)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarehouseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarehouseStreet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarehouseArea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarehouseTown)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarehousePostCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarehouseTelephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarehouseFax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarehouseMemo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SHopType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultWarehouse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ShopUID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ShopUID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ShopUID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

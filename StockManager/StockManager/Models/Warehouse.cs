@@ -42,7 +42,6 @@ namespace StockManager.Models
         public string WarehouseTelephone { get; set; }
         [Display(Name = "Fax")]
         [StringLength(16)]
-        [Required]
         public string WarehouseFax { get; set; }
         [Display(Name = "Memo")]
         public string WarehouseMemo { get; set; }

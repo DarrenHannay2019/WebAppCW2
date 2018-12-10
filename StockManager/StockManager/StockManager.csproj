@@ -6,22 +6,45 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Shops\ShopAdjustment\**" />
+    <Compile Remove="Pages\Shops\ShopReturn\**" />
+    <Compile Remove="Pages\Shops\ShopTransfer\**" />
+    <Compile Remove="Pages\Shops\Shop\**" />
+    <Compile Remove="Pages\Warehouses\WarehouseAdjustment\**" />
+    <Compile Remove="Pages\Warehouses\WarehouseReturn\**" />
+    <Compile Remove="Pages\Warehouses\WarehouseTransfer\**" />
+    <Content Remove="Pages\Shops\ShopAdjustment\**" />
+    <Content Remove="Pages\Shops\ShopReturn\**" />
+    <Content Remove="Pages\Shops\ShopTransfer\**" />
+    <Content Remove="Pages\Shops\Shop\**" />
+    <Content Remove="Pages\Warehouses\WarehouseAdjustment\**" />
+    <Content Remove="Pages\Warehouses\WarehouseReturn\**" />
+    <Content Remove="Pages\Warehouses\WarehouseTransfer\**" />
+    <EmbeddedResource Remove="Pages\Shops\ShopAdjustment\**" />
+    <EmbeddedResource Remove="Pages\Shops\ShopReturn\**" />
+    <EmbeddedResource Remove="Pages\Shops\ShopTransfer\**" />
+    <EmbeddedResource Remove="Pages\Shops\Shop\**" />
+    <EmbeddedResource Remove="Pages\Warehouses\WarehouseAdjustment\**" />
+    <EmbeddedResource Remove="Pages\Warehouses\WarehouseReturn\**" />
+    <EmbeddedResource Remove="Pages\Warehouses\WarehouseTransfer\**" />
+    <None Remove="Pages\Shops\ShopAdjustment\**" />
+    <None Remove="Pages\Shops\ShopReturn\**" />
+    <None Remove="Pages\Shops\ShopTransfer\**" />
+    <None Remove="Pages\Shops\Shop\**" />
+    <None Remove="Pages\Warehouses\WarehouseAdjustment\**" />
+    <None Remove="Pages\Warehouses\WarehouseReturn\**" />
+    <None Remove="Pages\Warehouses\WarehouseTransfer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
-    <Folder Include="Pages\Shops\Shop\" />
-    <Folder Include="Pages\Shops\ShopAdjustment\" />
-    <Folder Include="Pages\Shops\ShopReturn\" />
-    <Folder Include="Pages\Shops\ShopTransfer\" />
     <Folder Include="Pages\Stock\" />
     <Folder Include="Pages\Suppliers\" />
-    <Folder Include="Pages\Warehouses\WarehouseReturn\" />
-    <Folder Include="Pages\Warehouses\WarehouseTransfer\" />
-    <Folder Include="Pages\Warehouses\WarehouseAdjustment\" />
-    <Folder Include="Pages\Warehouses\Warehouse\" />
   </ItemGroup>
 
 </Project>

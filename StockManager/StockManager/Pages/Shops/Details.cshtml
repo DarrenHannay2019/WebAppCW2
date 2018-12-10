@@ -1,0 +1,97 @@
+﻿@page
+@model StockManager.Pages.Shops.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Shop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.ShopRef)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.ShopRef)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseArea)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseArea)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseTown)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseTown)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehousePostCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehousePostCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseTelephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseTelephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseFax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseFax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.WarehouseMemo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.WarehouseMemo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.SHopType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.SHopType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.DefaultWarehouse)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.DefaultWarehouse)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.CreatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.CreatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.CreatedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Shop.ShopUID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

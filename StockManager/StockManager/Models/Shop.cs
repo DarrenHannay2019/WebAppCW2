@@ -14,6 +14,7 @@ namespace StockManager.Models
             Shop,
             Consessions
         }
+        [Key]
         public int ShopUID { get; set; }
         [Required]
         [Display(Name = "Shop Code")]
@@ -39,8 +40,7 @@ namespace StockManager.Models
         [StringLength(16)]
         public string WarehouseTelephone { get; set; }
         [Display(Name = "Fax")]
-        [StringLength(16)]
-        [Required]
+        [StringLength(16)]    
         public string WarehouseFax { get; set; }
         [Display(Name = "Memo")]
         public string WarehouseMemo { get; set; }

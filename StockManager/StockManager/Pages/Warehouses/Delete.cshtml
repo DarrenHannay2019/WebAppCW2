@@ -1,0 +1,100 @@
+﻿@page
+@model StockManager.Pages.Warehouses.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Warehouse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseRef)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseRef)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseArea)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseArea)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseTown)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseTown)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehousePostCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehousePostCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseTelephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseTelephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseFax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseFax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseMemo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseMemo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.WarehouseType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.DefaultWarehouse)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.DefaultWarehouse)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.CreatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.CreatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Warehouse.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.CreatedDate)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Warehouse.WarehouseUID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

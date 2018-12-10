@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StockManager.Data;
 
 namespace StockManager.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181210183249_Add Warehous")]
+    partial class AddWarehous
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,53 +186,6 @@ namespace StockManager.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("StockManager.Models.Shop", b =>
-                {
-                    b.Property<int>("ShopUID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CreatedBy");
-
-                    b.Property<DateTime>("CreatedDate");
-
-                    b.Property<bool>("DefaultWarehouse");
-
-                    b.Property<int>("SHopType");
-
-                    b.Property<string>("ShopRef")
-                        .IsRequired()
-                        .HasMaxLength(10);
-
-                    b.Property<string>("WarehouseArea")
-                        .HasMaxLength(60);
-
-                    b.Property<string>("WarehouseFax")
-                        .HasMaxLength(16);
-
-                    b.Property<string>("WarehouseMemo");
-
-                    b.Property<string>("WarehouseName")
-                        .IsRequired()
-                        .HasMaxLength(10);
-
-                    b.Property<string>("WarehousePostCode")
-                        .HasMaxLength(11);
-
-                    b.Property<string>("WarehouseStreet")
-                        .HasMaxLength(60);
-
-                    b.Property<string>("WarehouseTelephone")
-                        .HasMaxLength(16);
-
-                    b.Property<string>("WarehouseTown")
-                        .HasMaxLength(60);
-
-                    b.HasKey("ShopUID");
-
-                    b.ToTable("Shop");
-                });
-
             modelBuilder.Entity("StockManager.Models.Warehouse", b =>
                 {
                     b.Property<int>("WarehouseUID")
@@ -247,6 +202,7 @@ namespace StockManager.Data.Migrations
                         .HasMaxLength(60);
 
                     b.Property<string>("WarehouseFax")
+                        .IsRequired()
                         .HasMaxLength(16);
 
                     b.Property<string>("WarehouseMemo");

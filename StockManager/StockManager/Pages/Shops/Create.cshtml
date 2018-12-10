@@ -1,0 +1,96 @@
+﻿@page
+@model StockManager.Pages.Shops.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Shop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Shop.ShopRef" class="control-label"></label>
+                <input asp-for="Shop.ShopRef" class="form-control" />
+                <span asp-validation-for="Shop.ShopRef" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.WarehouseName" class="control-label"></label>
+                <input asp-for="Shop.WarehouseName" class="form-control" />
+                <span asp-validation-for="Shop.WarehouseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.WarehouseStreet" class="control-label"></label>
+                <input asp-for="Shop.WarehouseStreet" class="form-control" />
+                <span asp-validation-for="Shop.WarehouseStreet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.WarehouseArea" class="control-label"></label>
+                <input asp-for="Shop.WarehouseArea" class="form-control" />
+                <span asp-validation-for="Shop.WarehouseArea" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.WarehouseTown" class="control-label"></label>
+                <input asp-for="Shop.WarehouseTown" class="form-control" />
+                <span asp-validation-for="Shop.WarehouseTown" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.WarehousePostCode" class="control-label"></label>
+                <input asp-for="Shop.WarehousePostCode" class="form-control" />
+                <span asp-validation-for="Shop.WarehousePostCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.WarehouseTelephone" class="control-label"></label>
+                <input asp-for="Shop.WarehouseTelephone" class="form-control" />
+                <span asp-validation-for="Shop.WarehouseTelephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.WarehouseFax" class="control-label"></label>
+                <input asp-for="Shop.WarehouseFax" class="form-control" />
+                <span asp-validation-for="Shop.WarehouseFax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.WarehouseMemo" class="control-label"></label>
+                <input asp-for="Shop.WarehouseMemo" class="form-control" />
+                <span asp-validation-for="Shop.WarehouseMemo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.SHopType" class="control-label"></label>
+                <input asp-for="Shop.SHopType" class="form-control" />
+                <span asp-validation-for="Shop.SHopType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Shop.DefaultWarehouse" />Clearance Shop)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.CreatedBy" class="control-label"></label>
+                <input asp-for="Shop.CreatedBy" class="form-control" />
+                <span asp-validation-for="Shop.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shop.CreatedDate" class="control-label"></label>
+                <input asp-for="Shop.CreatedDate" class="form-control" />
+                <span asp-validation-for="Shop.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
