@@ -60,7 +60,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Shop.SHopType" class="control-label"></label>
-                <input asp-for="Shop.SHopType" class="form-control" />
+                @Html.DropDownListFor(m => m.Shop.SHopType, new SelectList(Enum.GetValues(typeof(StockManager.Models.Shop.SHType))), "Select Type")
                 <span asp-validation-for="Shop.SHopType" class="text-danger"></span>
             </div>
             <div class="form-group">

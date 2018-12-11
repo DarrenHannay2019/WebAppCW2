@@ -1,4 +1,6 @@
 ﻿@page
+
+
 @model StockManager.Pages.Warehouses.CreateModel
 
 @{
@@ -59,10 +61,11 @@
                 <span asp-validation-for="Warehouse.WarehouseMemo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Warehouse.WarehouseType" class="control-label"></label>
-                <input asp-for="Warehouse.WarehouseType" class="form-control" />
+                <label asp-for="Warehouse.WarehouseType" class="control-label"></label>             
+                @Html.DropDownListFor(m => m.Warehouse.WarehouseType, new SelectList(Enum.GetValues(typeof(StockManager.Models.Warehouse.WHType))), "Select Type")
                 <span asp-validation-for="Warehouse.WarehouseType" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <div class="checkbox">
                     <label>

@@ -47,6 +47,7 @@ namespace StockManager.Models
         [Display(Name = "Shop Type")]
         [Required]
         public SHType? SHopType { get; set; }
+        [Display(Name = "Clearance")]
         public bool DefaultWarehouse { get; set; }
         [Display(Name = "Created By")]
         public int CreatedBy { get; set; }
