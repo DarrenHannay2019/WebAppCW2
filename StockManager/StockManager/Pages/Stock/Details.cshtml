@@ -1,0 +1,91 @@
+﻿@page
+@model StockManager.Pages.Stock.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.StockCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.StockCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.SupplierRef)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.SupplierRef)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.DeadCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.DeadCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.Clearance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.Clearance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.ZeroQty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.ZeroQty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.Season)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.Season)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.AmtTaken)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.AmtTaken)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.DeliveredQty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.DeliveredQty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.CostValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.CostValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.PCMarkUp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.PCMarkUp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.CreatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.CreatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock.CreatedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Stock.StockID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
