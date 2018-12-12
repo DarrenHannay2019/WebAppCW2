@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StockManager.Data;
 
 namespace StockManager.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181212165030_tblStock")]
+    partial class tblStock
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -194,8 +196,7 @@ namespace StockManager.Data.Migrations
 
                     b.Property<DateTime>("CreatedDate");
 
-                    b.Property<bool>("DefaultWarehouse")
-                        .HasColumnName("Clearance");
+                    b.Property<bool>("DefaultWarehouse");
 
                     b.Property<int>("SHopType");
 
@@ -204,35 +205,27 @@ namespace StockManager.Data.Migrations
                         .HasMaxLength(10);
 
                     b.Property<string>("WarehouseArea")
-                        .HasColumnName("ShopArea")
                         .HasMaxLength(60);
 
                     b.Property<string>("WarehouseFax")
-                        .HasColumnName("ShopFax")
                         .HasMaxLength(16);
 
-                    b.Property<string>("WarehouseMemo")
-                        .HasColumnName("ShopMemo");
+                    b.Property<string>("WarehouseMemo");
 
                     b.Property<string>("WarehouseName")
                         .IsRequired()
-                        .HasColumnName("ShopName")
                         .HasMaxLength(10);
 
                     b.Property<string>("WarehousePostCode")
-                        .HasColumnName("ShopPostCode")
                         .HasMaxLength(11);
 
                     b.Property<string>("WarehouseStreet")
-                        .HasColumnName("ShopStreet")
                         .HasMaxLength(60);
 
                     b.Property<string>("WarehouseTelephone")
-                        .HasColumnName("ShopTelephone")
                         .HasMaxLength(16);
 
                     b.Property<string>("WarehouseTown")
-                        .HasColumnName("ShopTown")
                         .HasMaxLength(60);
 
                     b.HasKey("ShopUID");
