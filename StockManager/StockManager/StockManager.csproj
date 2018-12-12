@@ -43,6 +43,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
+    <Folder Include="Pages\Stock\" />
     <Folder Include="Pages\Suppliers\" />
   </ItemGroup>
 

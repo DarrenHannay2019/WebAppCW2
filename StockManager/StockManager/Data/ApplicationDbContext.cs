@@ -15,6 +15,5 @@ namespace StockManager.Data
         }
         public DbSet<StockManager.Models.Warehouse> Warehouse { get; set; }
         public DbSet<StockManager.Models.Shop> Shop { get; set; }
-        public DbSet<StockManager.Models.Stock> Stock { get; set; }
     }
 }
