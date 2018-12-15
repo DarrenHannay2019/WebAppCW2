@@ -24,7 +24,7 @@ namespace StockManager
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<AppIdentityDbContext>();
+                    var context = services.GetRequiredService<StockManager.Data.ApplicationDbContext>();
                     context.Database.EnsureCreated();
                 }
                 catch (Exception ex)

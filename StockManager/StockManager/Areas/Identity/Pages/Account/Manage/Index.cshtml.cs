@@ -8,18 +8,19 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using StockManager.Areas.Identity.Data;
 
 namespace StockManager.Areas.Identity.Pages.Account.Manage
 {
     public partial class IndexModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<StockManagerUser> _userManager;
+        private readonly SignInManager<StockManagerUser> _signInManager;
         private readonly IEmailSender _emailSender;
 
         public IndexModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<StockManagerUser> userManager,
+            SignInManager<StockManagerUser> signInManager,
             IEmailSender emailSender)
         {
             _userManager = userManager;
@@ -39,6 +40,9 @@ namespace StockManager.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
+            [Required]
+            [DataType(DataType.Text)]
+            public string Name { get; set; }
             [Required]
             [EmailAddress]
             public string Email { get; set; }
@@ -64,6 +68,7 @@ namespace StockManager.Areas.Identity.Pages.Account.Manage
 
             Input = new InputModel
             {
+                Name = user.Name,
                 Email = email,
                 PhoneNumber = phoneNumber
             };
@@ -87,6 +92,10 @@ namespace StockManager.Areas.Identity.Pages.Account.Manage
             }
 
             var email = await _userManager.GetEmailAsync(user);
+            if (Input.Name != user.Name)
+            {
+                user.Name = Input.Name;
+            }
             if (Input.Email != email)
             {
                 var setEmailResult = await _userManager.SetEmailAsync(user, Input.Email);
@@ -107,7 +116,7 @@ namespace StockManager.Areas.Identity.Pages.Account.Manage
                     throw new InvalidOperationException($"Unexpected error occurred setting phone number for user with ID '{userId}'.");
                 }
             }
-
+            await _userManager.UpdateAsync(user);
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";
             return RedirectToPage();
